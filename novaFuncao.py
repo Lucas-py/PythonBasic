@@ -35,4 +35,4 @@ percentual = int(input('Insira o numero da porcentagem: '))
 num = int(input('Insira um número: '))
 
 resultado = porcentagem(num, percentual)
- print(resultado)
+print(resultado)
