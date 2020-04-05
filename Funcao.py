@@ -1,18 +1,37 @@
 '''
-Iniciando funções em python
--Criando duas funções,
-onde as duas serão imprimidas em uma outra função
+
+1 - Executar o escopo de uma função dentro de outra função
+
 '''
-def Saudacao(ola):
-    return ola # função 'Saudacao' retornando paramêntro 'Ola'
 
-def Nomes(nome):
-    return nome # Função 'Nomes' retornando paramêntro 'Nome'
+def Ola(saudacao):
+     return f'{saudacao}'
 
-def Imprimir(saudacao, nome): #  Função onde sera imprimido as duas funções anteriores
-    print(f'{saudacao}. sr {nome}')
+def Imprimir(arg):
+ print(arg)
 
-saud = Saudacao('Ola') #  Aplicando valor ao paramêntro 'Ola' da função 'Saudacao'
-nom = Nomes('Lucas') #  Aplicando o valor ao pramêntro 'nome' da função 'Nomes'
 
-Imprimir(saud,nom) #  passando os valores para  os paramentro e executando a função 'Imprimir'
+saudacao = Ola('Olá')
+
+Imprimir(saudacao)
+
+'''
+
+2 - Executar duas funções dentro de uma função master
+
+'''
+
+def nome(nome): # função nome esta retonando o nome
+    return nome
+
+def soma(n1,n2): # função soma esta retornando o resultado de n1 + n2
+      return n1 + n2
+
+def resultado(nome, soma):
+
+     print(f'{nome} resultado {soma}')
+
+soma1 = soma(2,2)
+nome1 = nome('Lucas')
+
+resultado(nome1.replace('L','0').upper(), soma1)
